@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduGenie - Google Gemini powered learning assistant" />
+  <title>EduGenie | Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AI-POWERED EDUCATION</p>
+        <h1>EduGenie</h1>
+        <p>Ask questions, simplify concepts, generate quizzes, summarize notes, and build a learning path.</p>
+      </div>
+      <div class="badge">Gemini + FastAPI</div>
+    </header>
+
+    <section class="card">
+      <label for="task">Choose a task</label>
+      <select id="task">
+        <option value="qa">Ask a Question</option>
+        <option value="explain">Explain a Concept</option>
+        <option value="quiz">Generate Quiz</option>
+        <option value="summarize">Summarize Text</option>
+        <option value="learn">Recommend Learning Path</option>
+      </select>
+
+      <label id="input-label" for="input-text">Your question</label>
+      <textarea id="input-text" rows="9" placeholder="Example: What is the difference between TCP and UDP?"></textarea>
+
+      <div class="actions">
+        <button id="submit-btn">Generate</button>
+        <button id="clear-btn" class="secondary" type="button">Clear</button>
+      </div>
+    </section>
+
+    <section id="result-card" class="card result-card hidden" aria-live="polite">
+      <div class="result-heading">
+        <h2>Result</h2>
+        <span id="status"></span>
+      </div>
+      <div id="result"></div>
+    </section>
+
+    <footer>EduGenie project • For learning assistance; verify important information with trusted academic sources.</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
